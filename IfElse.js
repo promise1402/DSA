@@ -1,0 +1,16 @@
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("enter your age: ", function(age){
+    age = parseInt(age);
+    if (age >= 18){
+        console.log("You are eligible to vote");
+    }
+    else{
+        console.log("You are not eligible to vote");
+    }
+    rl.close();
+})
