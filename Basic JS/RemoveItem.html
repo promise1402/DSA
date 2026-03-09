@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List App</title>
+</head>
+<body>
+
+    <h2>Enter Items</h2>
+
+    <input type="text" id="itemInput" placeholder="Enter item">
+
+    <button id="addButton" onclick="addNum()">Add Item</button>
+
+    <ul id="itemList">
+    </ul>
+
+    <script>
+
+        function addNum() {
+
+            const input = document.getElementById("itemInput");
+            const value = input.value;
+    
+            if(value === "") {
+                console.log("empty input feild"); 
+                return;
+            }
+    
+            const li = document.createElement("li");
+            console.log("input", li)
+    
+            li.textContent = value + "  ";
+            console.log("value added =", value);
+
+            const deleteBtn = document.createElement("Button");
+            deleteBtn.textContent = "Delete";
+
+            deleteBtn.onclick = function () {
+                li.remove();
+            }
+
+            li.appendChild(deleteBtn);
+    
+            document.getElementById("itemList").appendChild(li);
+    
+            input.value = "";
+        }
+        
+    </script>
+
+</body>
+</html>

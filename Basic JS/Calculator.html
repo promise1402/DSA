@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Calculator</h2>
+
+    <input type="text" id="num1" placeholder="Enter num 1">
+    <input type="text" id="num2" placeholder="Enter num 2">
+    <p id="result"></p>
+    <br>
+    <br>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="prod()">x</button>
+
+    <script>
+
+        function add() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+
+            const sum = n1 + n2;
+            console.log("sum", sum);
+            document.getElementById("result").textContent = "Sum = " + sum;
+
+        }
+
+        function sub() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+
+            const diff = n1 - n2;
+            console.log("diff", diff);
+            document.getElementById("result").textContent = "Diff = " + diff;
+
+        }
+
+        function prod() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+
+            const prod = n1 * n2;
+            console.log("Prod", prod);
+            document.getElementById("result").textContent = "Prod = " + prod;
+
+        }
+    </script>
+
+
+</body>
+
+</html>

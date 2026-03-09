@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Counter App</title>
+</head>
+
+<body>
+    <h2>Counter</h2>
+    <h3 id="count">0</h3>
+
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+    <button onclick="reset()">reset</button>
+
+    <script>
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById("count").textContent = count;
+        }
+
+        function decrement() {
+            if (count > 0)
+                count--;
+            document.getElementById("count").textContent = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("count").textContent = count;
+        }
+    </script>
+
+</body>
+
+</html>
