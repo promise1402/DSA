@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>To Do List</h2>
+    <input type="text" placeholder="Enter task" id="input">
+    <button id="btn" onclick="addTask()">Add</button>
+
+    <ol id="list"></ol>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById("input");
+            const value = input.value;
+
+            if (value === "") {
+                console.log("enter the task");
+                return;
+            }
+
+            const li = document.createElement("li");
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            const text = document.createTextNode(value);
+
+            li.appendChild(checkbox);
+            li.appendChild(text);
+
+            document.getElementById("list").appendChild(li);
+
+            input.value = "";
+        }
+    </script>
+
+</body>
+
+</html>
